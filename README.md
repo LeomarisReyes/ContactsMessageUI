@@ -1,4 +1,4 @@
- # Contacts & Message UI in .Xamarin Forms
+ # Contacts & Message UI in Xamarin Forms
 
 <p>Contacts & Message UI App is a replica made in Xamarin Forms, hoping you enjoy it!</p>
 
