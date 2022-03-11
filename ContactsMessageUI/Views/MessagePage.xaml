@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ContactsMessageUI.Views.MessagePage">
+    <ContentPage.Content>
+         <!-- Main layout-->
+        <Grid RowDefinitions="Auto,Auto,*" ColumnDefinitions="*,*" Padding="30,60,30,0">
+
+            <!-- Main Label and message indicator:-->
+            <Label Grid.Row="0" Grid.Column="0" Text="Messages" FontAttributes="Bold" Margin="10,0,0,0" FontSize="25"/>
+            <Label Grid.Row="0" Grid.Column="1" Text="4 new messages" TextColor="#b4b4b4" VerticalTextAlignment="Center" FontAttributes="Bold" HorizontalTextAlignment="End" FontSize="15"/>
+
+            <!-- Message list-->
+            <CollectionView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20,0,0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalScrollBarVisibility="Never"
+                    ItemsSource="{Binding messages}"> 
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto,Auto,Auto" Padding="10">
+                                  <Frame Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" BorderColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" HasShadow="False" CornerRadius="17" Padding="0" IsClippedToBounds="True" Margin="0,0,20,0">
+                                     <Image Source="{Binding Picture}" Aspect="AspectFill" WidthRequest="70" HeightRequest="70"/>
+                                  </Frame>
+                                  <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold"/>
+                                  <Label Grid.Row="1" Grid.Column="1" Text="{Binding StatusComment}" FontAttributes="Bold" TextColor="#b4b4b4"/>
+                                  <Ellipse Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" IsVisible="{Binding IsOnline}" VerticalOptions="Center" HorizontalOptions="Start" Fill="#1ad32e" HeightRequest="10" WidthRequest="10" StrokeThickness="0"/>
+                                  <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" TextColor="#6c6c6c" Margin="0,15" LineHeight="1.5" Text="{Binding Comment}" FontSize="15" />
+                                  <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" IsVisible="{Binding IsCommentPicture}" BorderColor="Transparent" HorizontalOptions="Start" VerticalOptions="Center" HasShadow="False" CornerRadius="17" Padding="0" IsClippedToBounds="True">
+                                     <Image Source="{Binding CommentPicture}" Aspect="AspectFill" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                  </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </ContentPage.Content>
+</ContentPage>

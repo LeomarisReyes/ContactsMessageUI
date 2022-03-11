@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{1F91353C-D155-4EB0-AA55-E59FA84F81A0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContactsMessageUI/App.xaml.cs">
+    <Files>
+      <File FileName="ContactsMessageUI/Views/Contacts.xaml" Line="9" Column="103" />
+      <File FileName="ContactsMessageUI/Views/MessagePage.xaml" />
+      <File FileName="ContactsMessageUI/App.xaml.cs" Line="13" Column="45" />
+      <File FileName="ContactsMessageUI/Models/Contacts.cs" />
+      <File FileName="ContactsMessageUI/ViewModels/ContactsViewModel.cs" />
+      <File FileName="ContactsMessageUI/Models/ContactsStatus.cs" />
+      <File FileName="ContactsMessageUI/Models/Messages.cs" Line="10" Column="30" />
+      <File FileName="ContactsMessageUI/Views/Contacts.xaml.cs" />
+      <File FileName="ContactsMessageUI/Views/MessagePage.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ContactsMessageUI" expanded="True" selected="True">
+            <Node name="ContactsMessageUI" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Contacts.xaml" expanded="True" />
+                <Node name="MessagePage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="ContactsMessageUI.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ContactsMessageUI.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.0C93035C-3A72-47E3-90FE-691A13B3074B" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ContactsMessageUI.Android PreferredExecutionTarget="Android.lrr_-_pixel_2" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ContactsMessageUI.Views.Contacts"
+    BackgroundColor="#1a1a1a">
+    <ContentPage.Content>
+        <!-- Main layout-->
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,*" ColumnDefinitions="*,Auto" Padding="30,60,30,-50">
+            <!-- 1. Search block-->
+            <Label Grid.Row="0" Grid.Column="0" Text="Contact" FontAttributes="Bold" TextColor="White" FontSize="27"/>
+            <Button Grid.Row="0" Grid.Column="1" CornerRadius="7" ImageSource="AddIcon" BackgroundColor="White" HeightRequest="35" WidthRequest="35"/>
+            <SearchBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="#818181" PlaceholderColor="#818181" Placeholder="Search" BackgroundColor="Transparent" Margin="0,10"/>
+            <!-- Favorite list-->
+            <Label Grid.Row="2" Grid.Column="0" Text="Favorites" FontAttributes="Bold" TextColor="White" FontSize="20" CharacterSpacing="1" Margin="0,0,0,20"/>
+            <CollectionView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Never"
+                 ItemsSource="{Binding contacts}" Margin="0,0,-10,0"
+                 HeightRequest="120"
+                 ItemsLayout="HorizontalList">
+                <CollectionView.ItemTemplate>
+                 <DataTemplate>
+                    <Grid RowDefinitions="Auto,Auto,Auto" Padding="0,0,15,0">
+                        <Frame Grid.Row="0" BorderColor="Transparent" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="70" HeightRequest="70" HasShadow="False" CornerRadius="17" Padding="0" IsClippedToBounds="True">
+                            <Image Source="{Binding Picture}" Aspect="AspectFill"/>
+                         </Frame> 
+                        <Ellipse Grid.Row="1" HorizontalOptions="Start" Margin="30,-10,30,0" Fill="#1ad32e" VerticalOptions="End" HeightRequest="10" WidthRequest="10" StrokeThickness="0"/>
+                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding Name}" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White" FontSize="14" CharacterSpacing="1" Margin="0,0,0,20"/>
+                    </Grid>
+                  </DataTemplate>
+                 </CollectionView.ItemTemplate>
+            </CollectionView>
+            <!-- Active Contacts Frames-->
+            <Frame Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="-30,0" VerticalOptions="FillAndExpand" HasShadow="True" CornerRadius="40" BackgroundColor="White">
+                <CollectionView HorizontalScrollBarVisibility="Never" 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalScrollBarVisibility="Never"
+                    ItemsSource="{Binding contactsStatus}"> 
+                    <CollectionView.ItemTemplate>
+                          <DataTemplate>
+                              <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto" Padding="20">
+                                  <Frame Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" BorderColor="Transparent" HorizontalOptions="Start" VerticalOptions="Start" HasShadow="False" CornerRadius="17" Padding="0" IsClippedToBounds="True" Margin="0,0,20,0">
+                                    <Image Source="{Binding Picture}" Aspect="AspectFill" WidthRequest="60" HeightRequest="60"/>
+                                  </Frame>
+                                  <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold"/>
+                                  <Label Grid.Row="1" Grid.Column="1" Text="{Binding StatusComment}" FontAttributes="Bold" TextColor="#b4b4b4"/>
+                                  <Ellipse Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" IsVisible="{Binding IsOnline}" VerticalOptions="Center" HorizontalOptions="Start" Margin="30,-10,30,0" Fill="#1ad32e" HeightRequest="10" WidthRequest="10" StrokeThickness="0"/>
+                              </Grid>
+                          </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView> 
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
