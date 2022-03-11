@@ -3,7 +3,7 @@
 <p>Contacts & Message UI App is a replica made in Xamarin Forms, hoping you enjoy it!</p>
 
 <p align="center">
-<img src="https://github.com/LeomarisReyes/ContactsMessageUI/blob/main/Images/AskXammy_Repliating_Contact_Message_UI_Xamarin_Forms.png" height="440" width="555" title="Contacts&MessageUI"/>
+<img src="https://github.com/LeomarisReyes/ContactsMessageUI/blob/main/Images/AskXammy_Repliating_Contact_Message_UI_Xamarin_Forms.png" height="460" width="555" title="Contacts&MessageUI"/>
 </p>
 
 <hr />
